@@ -4,16 +4,8 @@ import { getLatestGlobalData, getLatestCountrywiseData, getCountryIndex } from "
 export const GET_GLOBAL_COVID_DATA = 'get_global_covid_data';
 export const GET_COUNTRYWISE_COVID_DATA = 'get_cw_covid_data';
 export const GET_COUNTRY_INDEX = 'get_country_index';
-
-/*
-export const getGlobalData = () => async dispatch => {
-  console.log("Getting data from API");
-  const globalData = await axios.get('https://covidapi.info/api/v1/global');
-  dispatch({type: GET_GLOBAL_COVID_DATA, payload: globalData.data});
-  const countryWiseData = await axios.get('https://covidapi.info/api/v1/global/latest');
-  dispatch({type: GET_COUNTRYWISE_COVID_DATA, payload: countryWiseData.data});
-}
-*/
+export const GET_GLOBAL_COVID_TIMESERIES_DATA = 'get_global_covid_ts_data';
+export const GET_COUNTRYWISE_TIMESERIES_COVID_DATA = 'get_cw_covid_ts_data';
 
 export const getGlobalData = () => async dispatch => {
   console.log("Getting data from API");

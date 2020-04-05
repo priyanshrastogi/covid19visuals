@@ -5,6 +5,7 @@ export const getLatestGlobalData = (data) => {
   let confirmed = 0;
   let deaths = 0;
   let recovered = 0;
+  let active = 0;
   let keys = Object.keys(data);
   for (let country of keys) {
     const latest = data[country][data[country].length-1];
@@ -12,6 +13,7 @@ export const getLatestGlobalData = (data) => {
     confirmed = confirmed + latest.confirmed;
     deaths = deaths + latest.deaths;
     recovered = recovered + latest.recovered;
+    active = active + latest.confirmed - latest.deaths - latest.recovered;
   }
   const ncountries = keys.length;
   return {date, confirmed, deaths, recovered, ncountries};
@@ -42,4 +44,26 @@ export const getCountryIndex = (data) => {
     i++
   }
   return countries;
+}
+
+export const getGlobalCovidTimeSeries = (data) => {
+  const globalTimeSeries = [];
+  let keys = Object.keys(data);
+  const n = data[keys[0]].length;
+  for(let i=0; i<n; i++) {
+    const date = data[keys[0]][i].date
+    let confirmed = 0;
+    let deaths = 0;
+    let recovered = 0;
+    let active = 0;
+    for(let country of keys) {
+      const current = data[country][i];
+      confirmed = confirmed + current.confirmed;
+      deaths = deaths + current.deaths;
+      recovered = recovered + current.recovered;
+      active = active + current.confirmed - current.deaths - current.recovered;
+    }
+    globalTimeSeries.push({date, confirmed, deaths, recovered, active});
+  }
+  return globalTimeSeries;
 }

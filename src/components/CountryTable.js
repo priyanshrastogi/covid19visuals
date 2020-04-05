@@ -99,7 +99,7 @@ export default function CovidTable(props) {
           )}
         </tbody>
       </table>
-      <div>
+      <div className="has-text-centered">
         <button className="button is-small" onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {'<<'}
         </button>{' '}
