@@ -19,8 +19,8 @@ function Home(props) {
     <div>
       <Hero type='link' title='Global Information' subtitle='Latest Data, Trends, Facts' date={props.globalCovid.date}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
-        <GlobalCovidCounter globalCovid={props.globalCovid}/>
-        <GlobalCovidMap countrywiseCovid={props.countrywiseCovid}/>
+        <GlobalCovidCounter/>
+        <GlobalCovidMap/>
       </div>
       <Hero type='info' title='Country-wise Information' subtitle='Latest Data, Trends, Facts' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">

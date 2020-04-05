@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function GlobalCovidCounter(props) {
+function GlobalCovidCounter(props) {
   return (
     <div className="columns is-mobile is-multiline">
       <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
@@ -30,6 +31,12 @@ export default function GlobalCovidCounter(props) {
     </div>
   )
 }
+
+function mapStateToProps(state) {
+  return {globalCovid: state.globalCovid};
+}
+
+export default connect(mapStateToProps)(GlobalCovidCounter);
 
 const styles = {
   item: {
