@@ -32,3 +32,14 @@ export const getLatestCountrywiseData = (data) => {
   }
   return latestCountrywiseData;
 }
+
+export const getCountryIndex = (data) => {
+  let keys = Object.keys(data);
+  const countries = {};
+  let i = 0;
+  for (let country of keys) {
+    countries[country.toLowerCase()] = i;
+    i++
+  }
+  return countries;
+}

@@ -2,19 +2,19 @@ import React from 'react';
 
 export default function Hero(props) {
   return (
-    <section class={`hero is-${props.type}`}>
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-4">
+    <section className={`hero is-${props.type}`}>
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title is-4">
             {props.title}
           </h1>
-          <h2 class="subtitle">
+          <h2 className="subtitle">
             {props.subtitle}
           </h2>
-          <div class="tags has-addons">
+          <div className="tags has-addons">
             <p>
-              <span class="tag is-dark">Last Updated</span>
-              <span class="tag is-light">{props.date ?  new Date(props.date).toLocaleDateString(): '--'}</span>
+              <span className="tag is-dark">Last Updated</span>
+              <span className="tag is-light">{props.date ?  new Date(props.date).toLocaleDateString(): '--'}</span>
             </p>
           </div>
         </div>

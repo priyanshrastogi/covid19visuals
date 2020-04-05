@@ -61,7 +61,7 @@ export default function CovidTable(props) {
   
   return (
     <div className="table-container">
-      <table className="table table is-fullwidth" {...getTableProps()}>
+      <table className="table table is-hoverable is-fullwidth" {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>

@@ -5,6 +5,7 @@ import CovidTable from '../components/CountryTable';
 import Hero from '../components/Hero';
 import GlobalCovidCounter from '../components/GlobalCovidCounter';
 import GlobalCovidMap from '../components/GlobalCovidMap';
+import SeachCountryTile from '../components/SearchCountryTile';
 
 function Home(props) {
   
@@ -23,6 +24,7 @@ function Home(props) {
       </div>
       <Hero type='info' title='Country-wise Information' subtitle='Latest Data, Trends, Facts' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">
+        <SeachCountryTile />
         <div className="columns">
           <div className="column is-three-fifths is-offset-one-fifth">
             {props.countrywiseCovid.length !== 0 ?
