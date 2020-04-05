@@ -30,8 +30,7 @@ function GlobalCovidMap(props) {
   }
 
   return (
-    <div style={{marginBottom: 40, marginTop: 20}}>
-      <p className="has-text-centered"><span style={{paddingTop: 10}}>Select Map Type &nbsp; &nbsp;</span>
+    <div className="has-text-centered" style={{marginBottom: 40, marginTop: 20}}>
       <span class="select">
         <select onChange={handleTypeChange}>
           <option value='confirmed' selected={'confirmed' === type}>Confirmed</option>
@@ -40,10 +39,9 @@ function GlobalCovidMap(props) {
           <option value='recovered' selected={'recovered' === type}>Recovered</option>
         </select>
       </span>
-      </p>
       {props.countrywiseCovid.length !== 0 ?
-      <div style={{marginTop: 20}}>
-        <div className="is-hidden-mobile" style={{height: '50vh'}}>
+      <div>
+        <div className="is-hidden-mobile" style={{height: '50vh', marginTop: 20}}>
           <ResponsiveChoropleth
             data={props.countrywiseCovid}
             features={features}
@@ -63,7 +61,7 @@ function GlobalCovidMap(props) {
             projectionScale={120}
           />
         </div>
-        <div className="is-hidden-tablet" style={{height: '50vh'}}>
+        <div className="is-hidden-tablet" style={{height: '40vh'}}>
           <ResponsiveChoropleth
             data={props.countrywiseCovid}
             features={features}
