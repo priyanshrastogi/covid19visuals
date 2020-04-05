@@ -53,12 +53,13 @@ function GlobalCovidMap(props) {
             value={type}
             valueFormat=".2s"
             projectionTranslation={[ 0.5, 0.5 ]}
-            projectionRotation={[ 0, 0, 0 ]}
+            projectionRotation={[ -20, 0, 0 ]}
             enableGraticule={true}
             graticuleLineColor="#dddddd"
             borderWidth={0.5}
             borderColor="#152538"
-            projectionScale={120}
+            projectionScale={160}
+            projectionType="equalEarth"
           />
         </div>
         <div className="is-hidden-tablet" style={{height: '40vh'}}>
@@ -72,13 +73,15 @@ function GlobalCovidMap(props) {
             label="properties.name"
             value={type}
             valueFormat=".2s"
-            projectionTranslation={[ 0.4, 0.5 ]}
-            projectionRotation={[ 0, 0, 0 ]}
+            projectionTranslation={[ 0.45, 0.5 ]}
+            projectionRotation={[ -20, 0, 0 ]}
             enableGraticule={true}
             graticuleLineColor="#dddddd"
             borderWidth={0.5}
             borderColor="#152538"
-            projectionScale={55}
+            projectionScale={90}
+            projectionType="equalEarth"
+
           />
         </div>
       </div>
