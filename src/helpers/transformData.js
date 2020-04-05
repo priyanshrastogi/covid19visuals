@@ -67,3 +67,16 @@ export const getGlobalCovidTimeSeries = (data) => {
   }
   return globalTimeSeries;
 }
+
+export const getGlobalCovidDailyDelta = (globalTImeSeriesData) => {
+  const dailyDelta = [];
+  for(let i=1; i<globalTImeSeriesData.length; i++) {
+    const date = globalTImeSeriesData[i].date;
+    const confirmed = globalTImeSeriesData[i].confirmed - globalTImeSeriesData[i-1].confirmed;
+    const deaths = globalTImeSeriesData[i].deaths - globalTImeSeriesData[i-1].deaths;
+    const recovered = globalTImeSeriesData[i].recovered - globalTImeSeriesData[i-1].recovered;
+    const active = globalTImeSeriesData[i].active - globalTImeSeriesData[i-1].active;
+    dailyDelta.push({date, confirmed, deaths, recovered, active});
+  }
+  return dailyDelta;
+}

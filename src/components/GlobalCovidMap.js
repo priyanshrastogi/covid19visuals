@@ -31,14 +31,17 @@ function GlobalCovidMap(props) {
 
   return (
     <div className="has-text-centered" style={{marginBottom: 40, marginTop: 20}}>
-      <span class="select">
-        <select onChange={handleTypeChange}>
-          <option value='confirmed' selected={'confirmed' === type}>Confirmed</option>
-          <option value='active' selected={'active' === type}>Active</option>
-          <option value='deaths' selected={'deaths' === type}>Deaths</option>
-          <option value='recovered' selected={'recovered' === type}>Recovered</option>
-        </select>
-      </span>
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <p className='title is-4' style={{paddingTop: 7}}>Global Map</p>
+        <span class="select">
+          <select onChange={handleTypeChange}>
+            <option value='confirmed' selected={'confirmed' === type}>Confirmed</option>
+            <option value='active' selected={'active' === type}>Active</option>
+            <option value='deaths' selected={'deaths' === type}>Deaths</option>
+            <option value='recovered' selected={'recovered' === type}>Recovered</option>
+          </select>
+        </span>
+      </div>
       {props.countrywiseCovid.length !== 0 ?
       <div>
         <div className="is-hidden-mobile" style={{height: '50vh', marginTop: 20}}>

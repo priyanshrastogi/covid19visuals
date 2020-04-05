@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import GlobalCovidCounter from '../components/GlobalCovidCounter';
 import GlobalCovidMap from '../components/GlobalCovidMap';
 import SeachCountryTile from '../components/SearchCountryTile';
+import GlobalTimeSeriesGraph from '../components/GlobalTimeSeriesGraph';
 
 function Home(props) {
   
@@ -21,6 +22,9 @@ function Home(props) {
       <div className="container is-fluid" style={{marginTop: 20}}>
         <GlobalCovidCounter/>
         <GlobalCovidMap/>
+      </div>
+      <div className="container">
+        <GlobalTimeSeriesGraph />
       </div>
       <Hero type='info' title='Country-wise Information' subtitle='More information is coming soon' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">
