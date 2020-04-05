@@ -17,12 +17,12 @@ function Home(props) {
 
   return (
     <div>
-      <Hero type='link' title='Global Information' subtitle='Latest Data, Trends, Facts' date={props.globalCovid.date}/>
+      <Hero type='link' title='Global Information' subtitle='More Information is coming soon' date={props.globalCovid.date}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <GlobalCovidCounter/>
         <GlobalCovidMap/>
       </div>
-      <Hero type='info' title='Country-wise Information' subtitle='Latest Data, Trends, Facts' date={props.globalCovid.date}/>
+      <Hero type='info' title='Country-wise Information' subtitle='More information is coming soon' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">
         <SeachCountryTile />
         <div className="columns">
