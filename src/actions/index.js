@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getLatestGlobalData, getLatestCountrywiseData, getCountryIndex, getGlobalCovidTimeSeries, getGlobalCovidDailyDelta } from "../helpers/transformData";
+import { getLatestGlobalData, getLatestCountrywiseData, getCountryIndex, getGlobalCovidTimeSeries, getGlobalCovidDailyDelta, getCountrywiseCovidTimeSeries, getCountrywiseCovidDailyDelta } from "../helpers/transformData";
 
 export const GET_GLOBAL_COVID_DATA = 'get_global_covid_data';
 export const GET_COUNTRYWISE_COVID_DATA = 'get_cw_covid_data';
@@ -23,4 +23,8 @@ export const getGlobalData = () => async dispatch => {
   dispatch({type:GET_GLOBAL_COVID_TIMESERIES_DATA, payload: globalCovidTimeSeries});
   const globalDailyDelta = getGlobalCovidDailyDelta(globalCovidTimeSeries);
   dispatch({type: GET_GLOBAL_COVID_DELTA, payload: globalDailyDelta});
+  const countrywiseCovidTimeSeries = getCountrywiseCovidTimeSeries(mainData.data);
+  dispatch({type:GET_COUNTRYWISE_TIMESERIES_COVID_DATA, payload: countrywiseCovidTimeSeries});
+  const countrywiseDailyDelta = getCountrywiseCovidDailyDelta(countrywiseCovidTimeSeries);
+  dispatch({type: GET_COUNTRYWISE_COVID_DELTA, payload: countrywiseDailyDelta});
 }

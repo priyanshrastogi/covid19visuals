@@ -1,6 +1,8 @@
 import React from 'react';
 
 export default function Hero(props) {
+  const date =  new Date(props.date);
+  date.setHours(date.getHours() + 30);
   return (
     <section className={`hero is-${props.type}`}>
       <div className="hero-body">
@@ -14,7 +16,7 @@ export default function Hero(props) {
           <div className="tags has-addons">
             <p>
               <span className="tag is-dark">Last Updated</span>
-              <span className="tag is-light">{props.date ?  new Date(props.date).toLocaleDateString(): '--'}</span>
+              <span className="tag is-light">{props.date ? date.toLocaleDateString() + ', ' + date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) : '--'}</span>
             </p>
           </div>
         </div>

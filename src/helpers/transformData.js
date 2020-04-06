@@ -75,8 +75,42 @@ export const getGlobalCovidDailyDelta = (globalTImeSeriesData) => {
     const confirmed = globalTImeSeriesData[i].confirmed - globalTImeSeriesData[i-1].confirmed;
     const deaths = globalTImeSeriesData[i].deaths - globalTImeSeriesData[i-1].deaths;
     const recovered = globalTImeSeriesData[i].recovered - globalTImeSeriesData[i-1].recovered;
-    const active = globalTImeSeriesData[i].active - globalTImeSeriesData[i-1].active;
+    const active = Math.max(globalTImeSeriesData[i].active - globalTImeSeriesData[i-1].active, 0);
     dailyDelta.push({date, confirmed, deaths, recovered, active});
   }
   return dailyDelta;
+}
+
+export const getCountrywiseCovidTimeSeries = (data) => {
+  const countrywiseTimeSeries = [];
+  let keys = Object.keys(data);
+  for(let country of keys) {
+    countrywiseTimeSeries.push({country, data: data[country]});
+  }
+  for(let i=0; i<countrywiseTimeSeries.length; i++) {
+    for(let j=0; j<countrywiseTimeSeries[i].data.length; j++) {
+      const point = countrywiseTimeSeries[i].data[j];
+      const active = point.confirmed - point.deaths - point.recovered;
+      point.active = active;
+    }
+  }
+  return countrywiseTimeSeries;
+}
+
+export const getCountrywiseCovidDailyDelta = (countrywiseTimeSeriesData) => {
+  const countrywiseDailyDelta = [];
+  for(let i=0; i<countrywiseTimeSeriesData.length; i++) {
+    const dailyDelta = [];
+    const data = countrywiseTimeSeriesData[i].data;
+    for(let j=1; j<data.length; j++) {
+      const date = data[j].date;
+      const confirmed = data[j].confirmed - data[j-1].confirmed;
+      const deaths = data[j].deaths - data[j-1].deaths;
+      const recovered = data[j].recovered - data[j-1].recovered;
+      const active = Math.max(data[j].active - data[j-1].active, 0);
+      dailyDelta.push({date, confirmed, deaths, recovered, active});
+    }
+    countrywiseDailyDelta.push({country: countrywiseTimeSeriesData[i].country, data: dailyDelta});
+  }
+  return countrywiseDailyDelta;
 }

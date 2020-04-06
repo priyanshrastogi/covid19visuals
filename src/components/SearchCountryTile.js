@@ -11,7 +11,6 @@ function SeachCountryTile(props) {
       setSelectedCountry(index);
     }
   }
-  console.log(props.countries);
   return (
     <div className="columns">
       <div className="column is-three-fifths is-offset-one-fifth">

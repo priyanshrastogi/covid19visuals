@@ -7,6 +7,7 @@ import GlobalCovidCounter from '../components/GlobalCovidCounter';
 import GlobalCovidMap from '../components/GlobalCovidMap';
 import SeachCountryTile from '../components/SearchCountryTile';
 import GlobalTimeSeriesGraph from '../components/GlobalTimeSeriesGraph';
+import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph';
 
 function Home(props) {
   
@@ -37,6 +38,9 @@ function Home(props) {
             null}
           </div>
         </div>
+      </div>
+      <div className="container">
+        <CountrywiseTimeSeriesGraph />
       </div>
     </div>
   )
