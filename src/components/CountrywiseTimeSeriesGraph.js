@@ -83,6 +83,9 @@ function CountrywiseTimeSeriesGraph(props) {
       :
       null
       }
+      <div className="has-text-centered" style={{marginTop: 20, paddingRight: 10, paddingLeft: 20}}>
+        <p>You might find inaccuracy in above visualizations. This is due to inaccuracy in the data from source, which is provided by <a target="__blank" href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>. We are working to integrate more reliable data sources.</p>
+      </div>
     </div>
   )
 }

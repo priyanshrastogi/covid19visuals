@@ -5,13 +5,13 @@ export default function Footer() {
     <footer class="footer" style={{marginTop: 50}}>
       <div className="columns">
         <div className="column has-text-centered">
-          <p>Data is sourced from <a href="https://github.com/pomber/covid19">here</a> which takes data from JHU CSSE, WHO, CDC and various other sources.</p>
+          <p>This data is sourced from <a target="__blank" href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>, which takes data from WHO, US CDC, Various News Sources and Govts.</p>
         </div>
         <div className="column has-text-centered">
-          <p>This data and visualizations are updated daily automatically. 100% Accuracy of the data is not guaranteed.</p>
+          <p>This data and visualizations are updated daily automatically. 100% Accuracy of the data and visualizations is not guaranteed.</p>
         </div>
         <div className="column has-text-centered">
-          <p>This project is open-source. To contribute, make a PR <a href="https://github.com/priyanshrastogi/covid19visuals">here</a>.</p>
+          <p>This project is open-source. To contribute, make a PR to <a href="https://github.com/priyanshrastogi/covid19visuals">priyanshrastogi/covid19visuals</a>.</p>
         </div>
       </div>
       <div class="content has-text-centered">

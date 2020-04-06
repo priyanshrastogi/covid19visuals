@@ -72,9 +72,9 @@ export const getGlobalCovidDailyDelta = (globalTImeSeriesData) => {
   const dailyDelta = [];
   for(let i=1; i<globalTImeSeriesData.length; i++) {
     const date = globalTImeSeriesData[i].date;
-    const confirmed = globalTImeSeriesData[i].confirmed - globalTImeSeriesData[i-1].confirmed;
-    const deaths = globalTImeSeriesData[i].deaths - globalTImeSeriesData[i-1].deaths;
-    const recovered = globalTImeSeriesData[i].recovered - globalTImeSeriesData[i-1].recovered;
+    const confirmed = Math.max(globalTImeSeriesData[i].confirmed - globalTImeSeriesData[i-1].confirmed, 0);
+    const deaths = Math.max(globalTImeSeriesData[i].deaths - globalTImeSeriesData[i-1].deaths, 0);
+    const recovered = Math.max(globalTImeSeriesData[i].recovered - globalTImeSeriesData[i-1].recovered, 0);
     const active = Math.max(globalTImeSeriesData[i].active - globalTImeSeriesData[i-1].active, 0);
     dailyDelta.push({date, confirmed, deaths, recovered, active});
   }
@@ -104,9 +104,9 @@ export const getCountrywiseCovidDailyDelta = (countrywiseTimeSeriesData) => {
     const data = countrywiseTimeSeriesData[i].data;
     for(let j=1; j<data.length; j++) {
       const date = data[j].date;
-      const confirmed = data[j].confirmed - data[j-1].confirmed;
-      const deaths = data[j].deaths - data[j-1].deaths;
-      const recovered = data[j].recovered - data[j-1].recovered;
+      const confirmed = Math.max(data[j].confirmed - data[j-1].confirmed, 0);
+      const deaths = Math.max(data[j].deaths - data[j-1].deaths, 0);
+      const recovered = Math.max(data[j].recovered - data[j-1].recovered, 0);
       const active = Math.max(data[j].active - data[j-1].active, 0);
       dailyDelta.push({date, confirmed, deaths, recovered, active});
     }
