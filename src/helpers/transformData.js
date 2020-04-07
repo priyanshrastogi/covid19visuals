@@ -118,6 +118,7 @@ export const getCountrywiseCovidDailyDelta = (countrywiseTimeSeriesData) => {
 export const getIndiaData = (data) => {
   const result = {};
   const indiaTimeSeries = [];
+  const indiaTimeSeriesDelta = [];
   const monthRef = {January: 1, February: 2, March: 3, April: 4, May: 5, June: 6};
   const timeseries = data.cases_time_series;
   for(let i=0; i<timeseries.length; i++) {
@@ -128,12 +129,14 @@ export const getIndiaData = (data) => {
     const confirmedDelta = parseInt(timeseries[i].dailyconfirmed);
     const recoveredDelta = parseInt(timeseries[i].dailyrecovered);
     const deathsDelta = parseInt(timeseries[i].dailydeceased);
-    const activeDelta = confirmedDelta - recoveredDelta - deathsDelta;
+    const activeDelta = Math.max(confirmedDelta - recoveredDelta - deathsDelta, 0);
     const dateSplit = timeseries[i].date.split(' ');
-    const date = `${monthRef[dateSplit[1]]}-${dateSplit[0]}`
-    indiaTimeSeries.push({date, confirmed, recovered, deaths, active, confirmedDelta, recoveredDelta, deathsDelta, activeDelta});
+    const date = `2020-${monthRef[dateSplit[1]]}-${parseInt(dateSplit[0])}`
+    indiaTimeSeries.push({date, confirmed, recovered, deaths, active});
+    indiaTimeSeriesDelta.push({date, confirmed: confirmedDelta, recovered: recoveredDelta, deaths: deathsDelta, active: activeDelta});
   }
   result.timeseries = indiaTimeSeries;
+  result.timeseriesDelta = indiaTimeSeriesDelta;
   result.statewise = data.statewise;
   return result;  
 }

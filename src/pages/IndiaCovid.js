@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { getIndiaCovidData } from '../actions';
 import Hero from '../components/Hero';
 import IndiaCovidCounter from '../components/IndiaCovidCounter';
+import CovidTable from '../components/CovidTable';
+import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
 
 function IndiaCovid(props) {
   
@@ -20,20 +22,21 @@ function IndiaCovid(props) {
 
   return (
     <div>
-      <Hero type='link' title='India Covid-19 Information' subtitle='Statewise Information is coming soon' date={datetime} dontadd30/>
+      <Hero type='link' title='India Covid-19 Information' subtitle='Latest Updates, Facts and Analysis' date={datetime} dontadd30/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <IndiaCovidCounter/>
       </div>
-      <div className="container">
-        {/*time series india*/}
+      <div className="container" style={{marginTop: 40}}>
+        <CovidTimeSeriesGraph covidTimeSeries={props.indiaCovid.timeseries} covidTimeSeriesDelta={props.indiaCovid.timeseriesDelta} title='India Charts'/>
       </div>
+      <Hero type='success' title='State-wise Information' subtitle='District-level information is coming soon' date={datetime} dontadd30/>
       <div style={{marginTop: 40}} className="container is-fluid">
         <div className="columns">
           <div className="column is-three-fifths is-offset-one-fifth">
-            {/*props.countrywiseCovid.length !== 0 ?
-            <CovidTable data={props.countrywiseCovid}/>
+            {props.indiaCovid.statewise ?
+            <CovidTable data={props.indiaCovid.statewise.slice(1)} headerColumn='State/UT' headerAccessor='state' pageSize={20}/>
             :
-            null*/}
+            null}
           </div>
         </div>
       </div>

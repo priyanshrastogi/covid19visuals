@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
 import {LineChart, BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
 import *  as d3f from 'd3-format';
- 
-function GlobalTimeSeriesGraph(props) {
+import PropTypes from 'prop-types'; 
+
+export default function CovidTimeSeriesGraph(props) {
 
   const [type, setType] = useState('confirmed');
 
@@ -21,7 +21,7 @@ function GlobalTimeSeriesGraph(props) {
   return (
     <div style={{marginBottom: 40}}>
       <div style={{display: 'flex', justifyContent: 'space-between', marginLeft: 20, marginRight: 20}}>
-        <p className="title is-4"  style={{paddingTop: 7}}>Global Charts</p>
+        <p className="title is-4"  style={{paddingTop: 7}}>{props.title}</p>
         <div className="has-text-centered" style={{marginBottom: 20}}>
           <span class="select">
             <select onChange={handleTypeChange}>
@@ -36,7 +36,7 @@ function GlobalTimeSeriesGraph(props) {
       <div className="columns">
         <div className="column">
           <ResponsiveContainer width='100%' height={200}>
-            <LineChart data={props.globalCovidTimeSeries} margin={{top: 0, right: 20, left: 0, bottom: 0}}>
+            <LineChart data={props.covidTimeSeries} margin={{top: 0, right: 20, left: 0, bottom: 0}}>
               <XAxis dataKey="date" tickFormatter={(v) => v.substring(5)}/>
               <YAxis tickFormatter={(v) => d3f.format('.2s')(v)}/>
               <CartesianGrid strokeDasharray="3 3"/>
@@ -47,7 +47,7 @@ function GlobalTimeSeriesGraph(props) {
         </div>
         <div className="column">
           <ResponsiveContainer width='100%' height={200}>
-            <BarChart data={props.globalCovidDailyDelta} margin={{top: 0, right: 20, left: 0, bottom: 0}}>
+            <BarChart data={props.covidTimeSeriesDelta} margin={{top: 0, right: 20, left: 0, bottom: 0}}>
               <XAxis dataKey="date" tickFormatter={(v) => v.substring(5)}/>
               <YAxis tickFormatter={(v) => d3f.format('.2s')(v)}/>
               <CartesianGrid strokeDasharray="3 3"/>
@@ -61,9 +61,8 @@ function GlobalTimeSeriesGraph(props) {
   )
 }
 
-function mapStateToProps(state) {
-  return {globalCovidTimeSeries: state.globalCovidTimeSeries, globalCovidDailyDelta: state.globalCovidDailyDelta};
+CovidTimeSeriesGraph.propTypes = {
+  covidTimeSeries: PropTypes.array,
+  covidTimeSeriesDelta: PropTypes.array,
+  title: PropTypes.string
 }
-
-export default connect(mapStateToProps)(GlobalTimeSeriesGraph);
-

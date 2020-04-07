@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { getGlobalData } from '../actions';
-import CovidTable from '../components/CountryTable';
+import CovidTable from '../components/CovidTable';
 import Hero from '../components/Hero';
 import GlobalCovidCounter from '../components/GlobalCovidCounter';
 import GlobalCovidMap from '../components/GlobalCovidMap';
 import SeachCountryTile from '../components/SearchCountryTile';
-import GlobalTimeSeriesGraph from '../components/GlobalTimeSeriesGraph';
+import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
 import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph';
 import Notification from '../components/Notification';
 
@@ -21,21 +21,21 @@ function Home(props) {
   return (
     <div>
       <Notification content={<span><strong>India Covid-19 Information</strong> is available now in detail.</span>} type='primary' linkTitle='Visit Here' link='/india'/>
-      <Hero type='link' title='Global Information' subtitle='More Information is coming soon' date={props.globalCovid.date}/>
+      <Hero type='link' title='Global Information' subtitle='Daily Updates, Facts and Analysis' date={props.globalCovid.date}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <GlobalCovidCounter/>
         <GlobalCovidMap/>
       </div>
       <div className="container">
-        <GlobalTimeSeriesGraph />
+        <CovidTimeSeriesGraph covidTimeSeries={props.globalCovidTimeSeries} covidTimeSeriesDelta={props.globalCovidDailyDelta} title='Global Charts'/>
       </div>
-      <Hero type='info' title='Country-wise Information' subtitle='More information is coming soon' date={props.globalCovid.date}/>
+      <Hero type='info' title='Country-wise Information' subtitle='Daily Updates, Facts and Analysis' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">
         <SeachCountryTile />
         <div className="columns">
           <div className="column is-three-fifths is-offset-one-fifth">
             {props.countrywiseCovid.length !== 0 ?
-            <CovidTable data={props.countrywiseCovid}/>
+            <CovidTable data={props.countrywiseCovid} headerColumn='Country/Region' headerAccessor='country'/>
             :
             null}
           </div>
@@ -50,7 +50,7 @@ function Home(props) {
 
 
 function mapStateToProps(state) {
-  return {globalCovid: state.globalCovid, countrywiseCovid: state.countrywiseCovid};
+  return {globalCovid: state.globalCovid, countrywiseCovid: state.countrywiseCovid, globalCovidDailyDelta: state.globalCovidDailyDelta, globalCovidTimeSeries: state.globalCovidTimeSeries};
 }
 
 export default connect(mapStateToProps, { getGlobalData })(Home);

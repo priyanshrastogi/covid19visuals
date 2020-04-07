@@ -6,7 +6,7 @@ import *  as d3f from 'd3-format';
 function CountrywiseTimeSeriesGraph(props) {
 
   const [type, setType] = useState('confirmed');
-  const [country, setCountry] = useState(71);
+  const [country, setCountry] = useState(156);
 
   const handleTypeChange = (e) => {
     setType(e.target.value);
@@ -29,9 +29,6 @@ function CountrywiseTimeSeriesGraph(props) {
       }
     );
   }
-
-  console.log(props.countrywiseCovidTimeSeries.length);
-  console.log(props.countrywiseCovidDailyDelta.length);
 
   return (
     <div style={{marginBottom: 40, marginTop: 40}}>

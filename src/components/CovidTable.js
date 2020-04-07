@@ -1,12 +1,13 @@
 import React from 'react';
-import { useTable, useSortBy, usePagination } from 'react-table'
+import { useTable, useSortBy, usePagination } from 'react-table';
+import PropTypes from 'prop-types';
 
 export default function CovidTable(props) {
   
   let columns = [
     {
-      Header: 'Country/Region',
-      accessor: 'country',
+      Header: props.headerColumn,
+      accessor: props.headerAccessor,
     },
     {
       Header: 'Confirmed',
@@ -32,7 +33,7 @@ export default function CovidTable(props) {
 
   columns = React.useMemo(() => columns, []);
   const data = React.useMemo(() => props.data, []);
-  const initialState = {sortBy: [{id: 'confirmed', desc: true}], pageIndex: 0};
+  const initialState = {sortBy: [{id: 'confirmed', desc: true}], pageIndex: 0, pageSize: props.pageSize};
 
   const {
     getTableProps,
@@ -137,3 +138,14 @@ export default function CovidTable(props) {
     </div>
   )
 } 
+
+CovidTable.propTypes = {
+  headerColumn: PropTypes.string.isRequired,
+  headerAccessor: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
+  pageSize: PropTypes.number
+}
+
+CovidTable.defaultProps = {
+  pageSize: 10
+}
