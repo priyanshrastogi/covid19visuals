@@ -5,7 +5,7 @@ export default function Footer() {
     <footer class="footer" style={{marginTop: 50}}>
       <div className="columns">
         <div className="column has-text-centered">
-          <p>This data is sourced from <a target="__blank" href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>, which takes data from WHO, US CDC, Various News Sources and Govts.</p>
+          <p>Global and Country-wise Data is sourced from <a target="__blank" href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>. India Covid-19 Data is sourced from <a target="__blank" href="https://www.covid19india.org">COVID19INDIA.ORG</a></p>
         </div>
         <div className="column has-text-centered">
           <p>This data and visualizations are updated daily automatically. 100% Accuracy of the data and visualizations is not guaranteed.</p>

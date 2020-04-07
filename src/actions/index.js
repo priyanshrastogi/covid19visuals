@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getLatestGlobalData, getLatestCountrywiseData, getCountryIndex, getGlobalCovidTimeSeries, getGlobalCovidDailyDelta, getCountrywiseCovidTimeSeries, getCountrywiseCovidDailyDelta } from "../helpers/transformData";
+import { getLatestGlobalData, getLatestCountrywiseData, getCountryIndex, getGlobalCovidTimeSeries, getGlobalCovidDailyDelta, getCountrywiseCovidTimeSeries, getCountrywiseCovidDailyDelta, getIndiaData } from "../helpers/transformData";
 
 export const GET_GLOBAL_COVID_DATA = 'get_global_covid_data';
 export const GET_COUNTRYWISE_COVID_DATA = 'get_cw_covid_data';
@@ -8,7 +8,7 @@ export const GET_GLOBAL_COVID_TIMESERIES_DATA = 'get_global_covid_ts_data';
 export const GET_COUNTRYWISE_TIMESERIES_COVID_DATA = 'get_cw_covid_ts_data';
 export const GET_GLOBAL_COVID_DELTA = 'get_global_covid_delta';
 export const GET_COUNTRYWISE_COVID_DELTA = 'get_cw_covid_delta';
-
+export const GET_INDIA_COVID_DATA = 'get_india_covid_data';
 
 export const getGlobalData = () => async dispatch => {
   console.log("Getting data from API");
@@ -27,4 +27,10 @@ export const getGlobalData = () => async dispatch => {
   dispatch({type:GET_COUNTRYWISE_TIMESERIES_COVID_DATA, payload: countrywiseCovidTimeSeries});
   const countrywiseDailyDelta = getCountrywiseCovidDailyDelta(countrywiseCovidTimeSeries);
   dispatch({type: GET_COUNTRYWISE_COVID_DELTA, payload: countrywiseDailyDelta});
+}
+
+export const getIndiaCovidData = () => async dispatch => {
+  const indiaData = await axios.get('https://api.covid19india.org/data.json');
+  const indiaCovidData = getIndiaData(indiaData.data);
+  dispatch({type: GET_INDIA_COVID_DATA, payload: indiaCovidData});
 }

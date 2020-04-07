@@ -114,3 +114,26 @@ export const getCountrywiseCovidDailyDelta = (countrywiseTimeSeriesData) => {
   }
   return countrywiseDailyDelta;
 }
+
+export const getIndiaData = (data) => {
+  const result = {};
+  const indiaTimeSeries = [];
+  const monthRef = {January: 1, February: 2, March: 3, April: 4, May: 5, June: 6};
+  const timeseries = data.cases_time_series;
+  for(let i=0; i<timeseries.length; i++) {
+    const confirmed = parseInt(timeseries[i].totalconfirmed);
+    const recovered = parseInt(timeseries[i].totalrecovered);
+    const deaths = parseInt(timeseries[i].totaldeceased);
+    const active = confirmed - recovered - deaths;
+    const confirmedDelta = parseInt(timeseries[i].dailyconfirmed);
+    const recoveredDelta = parseInt(timeseries[i].dailyrecovered);
+    const deathsDelta = parseInt(timeseries[i].dailydeceased);
+    const activeDelta = confirmedDelta - recoveredDelta - deathsDelta;
+    const dateSplit = timeseries[i].date.split(' ');
+    const date = `${monthRef[dateSplit[1]]}-${dateSplit[0]}`
+    indiaTimeSeries.push({date, confirmed, recovered, deaths, active, confirmedDelta, recoveredDelta, deathsDelta, activeDelta});
+  }
+  result.timeseries = indiaTimeSeries;
+  result.statewise = data.statewise;
+  return result;  
+}

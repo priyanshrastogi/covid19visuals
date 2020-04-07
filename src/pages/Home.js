@@ -8,6 +8,7 @@ import GlobalCovidMap from '../components/GlobalCovidMap';
 import SeachCountryTile from '../components/SearchCountryTile';
 import GlobalTimeSeriesGraph from '../components/GlobalTimeSeriesGraph';
 import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph';
+import Notification from '../components/Notification';
 
 function Home(props) {
   
@@ -19,6 +20,7 @@ function Home(props) {
 
   return (
     <div>
+      <Notification content={<span><strong>India Covid-19 Information</strong> is available now in detail.</span>} type='primary' linkTitle='Visit Here' link='/india'/>
       <Hero type='link' title='Global Information' subtitle='More Information is coming soon' date={props.globalCovid.date}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <GlobalCovidCounter/>
