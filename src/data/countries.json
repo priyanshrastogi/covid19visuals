@@ -1,0 +1,1138 @@
+{
+  "Thailand": {
+    "alpha3": "THA",
+    "alpha2": "TH",
+    "flag": "🇹🇭",
+    "population": "69037513"
+  },
+  "Japan": {
+    "alpha3": "JPN",
+    "alpha2": "JP",
+    "flag": "🇯🇵",
+    "population": "127484450"
+  },
+  "Singapore": {
+    "alpha3": "SGP",
+    "alpha2": "SG",
+    "flag": "🇸🇬",
+    "population": "5708844"
+  },
+  "Nepal": {
+    "alpha3": "NPL",
+    "alpha2": "NP",
+    "flag": "🇳🇵",
+    "population": "29304998"
+  },
+  "Malaysia": {
+    "alpha3": "MYS",
+    "alpha2": "MY",
+    "flag": "🇲🇾",
+    "population": "31624264"
+  },
+  "Canada": {
+    "alpha3": "CAN",
+    "alpha2": "CA",
+    "flag": "🇨🇦",
+    "population": "36624199"
+  },
+  "Australia": {
+    "alpha3": "AUS",
+    "alpha2": "AU",
+    "flag": "🇦🇺",
+    "population": "24450561"
+  },
+  "Cambodia": {
+    "alpha3": "KHM",
+    "alpha2": "KH",
+    "flag": "🇰🇭",
+    "population": "16005373"
+  },
+  "Sri Lanka": {
+    "alpha3": "LKA",
+    "alpha2": "LK",
+    "flag": "🇱🇰",
+    "population": "21413249"
+  },
+  "Germany": {
+    "alpha3": "DEU",
+    "alpha2": "DE",
+    "flag": "🇩🇪",
+    "population": "82114224"
+  },
+  "Finland": {
+    "alpha3": "FIN",
+    "alpha2": "FI",
+    "flag": "🇫🇮",
+    "population": "5523231"
+  },
+  "United Arab Emirates": {
+    "alpha3": "ARE",
+    "alpha2": "AE",
+    "flag": "🇦🇪",
+    "population": "9400145"
+  },
+  "Philippines": {
+    "alpha3": "PHL",
+    "alpha2": "PH",
+    "flag": "🇵🇭",
+    "population": "104918090"
+  },
+  "India": {
+    "alpha3": "IND",
+    "alpha2": "IN",
+    "flag": "🇮🇳",
+    "population": "1339180127"
+  },
+  "Italy": {
+    "alpha3": "ITA",
+    "alpha2": "IT",
+    "flag": "🇮🇹",
+    "population": "59359900"
+  },
+  "Sweden": {
+    "alpha3": "SWE",
+    "alpha2": "SE",
+    "flag": "🇸🇪",
+    "population": "9910701"
+  },
+  "Spain": {
+    "alpha3": "ESP",
+    "alpha2": "ES",
+    "flag": "🇪🇸",
+    "population": "46354321"
+  },
+  "Belgium": {
+    "alpha3": "BEL",
+    "alpha2": "BE",
+    "flag": "🇧🇪",
+    "population": "11429336"
+  },
+  "Egypt": {
+    "alpha3": "EGY",
+    "alpha2": "EG",
+    "flag": "🇪🇬",
+    "population": "97553151"
+  },
+  "Lebanon": {
+    "alpha3": "LBN",
+    "alpha2": "LB",
+    "flag": "🇱🇧",
+    "population": "6082357"
+  },
+  "Iraq": {
+    "alpha3": "IRQ",
+    "alpha2": "IQ",
+    "flag": "🇮🇶",
+    "population": "38274618"
+  },
+  "Oman": {
+    "alpha3": "OMN",
+    "alpha2": "OM",
+    "flag": "🇴🇲",
+    "population": "4636262"
+  },
+  "Afghanistan": {
+    "alpha3": "AFG",
+    "alpha2": "AF",
+    "flag": "🇦🇫",
+    "population": "35530081"
+  },
+  "Bahrain": {
+    "alpha3": "BHR",
+    "alpha2": "BH",
+    "flag": "🇧🇭",
+    "population": "1492584"
+  },
+  "Kuwait": {
+    "alpha3": "KWT",
+    "alpha2": "KW",
+    "flag": "🇰🇼",
+    "population": "4136528"
+  },
+  "Algeria": {
+    "alpha3": "DZA",
+    "alpha2": "DZ",
+    "flag": "🇩🇿",
+    "population": "41318142"
+  },
+  "Croatia": {
+    "alpha3": "HRV",
+    "alpha2": "HR",
+    "flag": "🇭🇷",
+    "population": "4189353"
+  },
+  "Switzerland": {
+    "alpha3": "CHE",
+    "alpha2": "CH",
+    "flag": "🇨🇭",
+    "population": "8476005"
+  },
+  "Austria": {
+    "alpha3": "AUT",
+    "alpha2": "AT",
+    "flag": "🇦🇹",
+    "population": "8735453"
+  },
+  "Israel": {
+    "alpha3": "ISR",
+    "alpha2": "IL",
+    "flag": "🇮🇱",
+    "population": "8321570"
+  },
+  "Pakistan": {
+    "alpha3": "PAK",
+    "alpha2": "PK",
+    "flag": "🇵🇰",
+    "population": "197015955"
+  },
+  "Brazil": {
+    "alpha3": "BRA",
+    "alpha2": "BR",
+    "flag": "🇧🇷",
+    "population": "209288278"
+  },
+  "Georgia": {
+    "alpha3": "GEO",
+    "alpha2": "GE",
+    "flag": "🇬🇪",
+    "population": "3912061"
+  },
+  "Greece": {
+    "alpha3": "GRC",
+    "alpha2": "GR",
+    "flag": "🇬🇷",
+    "population": "11159773"
+  },
+  "North Macedonia": {
+    "alpha3": "MKD",
+    "alpha2": "MK",
+    "flag": "🇲🇰",
+    "population": "2024000"
+  },
+  "Norway": {
+    "alpha3": "NOR",
+    "alpha2": "NO",
+    "flag": "🇳🇴",
+    "population": "5305383"
+  },
+  "Romania": {
+    "alpha3": "ROU",
+    "alpha2": "RO",
+    "flag": "🇷🇴",
+    "population": "19679306"
+  },
+  "Estonia": {
+    "alpha3": "EST",
+    "alpha2": "EE",
+    "flag": "🇪🇪",
+    "population": "1309632"
+  },
+  "San Marino": {
+    "alpha3": "SMR",
+    "alpha2": "SM",
+    "flag": "🇸🇲",
+    "population": "33400"
+  },
+  "Belarus": {
+    "alpha3": "BLR",
+    "alpha2": "BY",
+    "flag": "🇧🇾",
+    "population": "9468338"
+  },
+  "Iceland": {
+    "alpha3": "ISL",
+    "alpha2": "IS",
+    "flag": "🇮🇸",
+    "population": "335025"
+  },
+  "Lithuania": {
+    "alpha3": "LTU",
+    "alpha2": "LT",
+    "flag": "🇱🇹",
+    "population": "2890297"
+  },
+  "Mexico": {
+    "alpha3": "MEX",
+    "alpha2": "MX",
+    "flag": "🇲🇽",
+    "population": "129163276"
+  },
+  "New Zealand": {
+    "alpha3": "NZL",
+    "alpha2": "NZ",
+    "flag": "🇳🇿",
+    "population": "4705818"
+  },
+  "Nigeria": {
+    "alpha3": "NGA",
+    "alpha2": "NG",
+    "flag": "🇳🇬",
+    "population": "190886311"
+  },
+  "Ireland": {
+    "alpha3": "IRL",
+    "alpha2": "IE",
+    "flag": "🇮🇪",
+    "population": "4761657"
+  },
+  "Luxembourg": {
+    "alpha3": "LUX",
+    "alpha2": "LU",
+    "flag": "🇱🇺",
+    "population": "583455"
+  },
+  "Monaco": {
+    "alpha3": "MCO",
+    "alpha2": "MC",
+    "flag": "🇲🇨",
+    "population": "38695"
+  },
+  "Qatar": {
+    "alpha3": "QAT",
+    "alpha2": "QA",
+    "flag": "🇶🇦",
+    "population": "2639211"
+  },
+  "Ecuador": {
+    "alpha3": "ECU",
+    "alpha2": "EC",
+    "flag": "🇪🇨",
+    "population": "16624858"
+  },
+  "Azerbaijan": {
+    "alpha3": "AZE",
+    "alpha2": "AZ",
+    "flag": "🇦🇿",
+    "population": "9827589"
+  },
+  "Armenia": {
+    "alpha3": "ARM",
+    "alpha2": "AM",
+    "flag": "🇦🇲",
+    "population": "2930450"
+  },
+  "Dominican Republic": {
+    "alpha3": "DOM",
+    "alpha2": "DO",
+    "flag": "🇩🇴",
+    "population": "10766998"
+  },
+  "Indonesia": {
+    "alpha3": "IDN",
+    "alpha2": "ID",
+    "flag": "🇮🇩",
+    "population": "263991379"
+  },
+  "Portugal": {
+    "alpha3": "PRT",
+    "alpha2": "PT",
+    "flag": "🇵🇹",
+    "population": "10329506"
+  },
+  "Andorra": {
+    "alpha3": "AND",
+    "alpha2": "AD",
+    "flag": "🇦🇩",
+    "population": "76965"
+  },
+  "Latvia": {
+    "alpha3": "LVA",
+    "alpha2": "LV",
+    "flag": "🇱🇻",
+    "population": "1949670"
+  },
+  "Morocco": {
+    "alpha3": "MAR",
+    "alpha2": "MA",
+    "flag": "🇲🇦",
+    "population": "35739580"
+  },
+  "Saudi Arabia": {
+    "alpha3": "SAU",
+    "alpha2": "SA",
+    "flag": "🇸🇦",
+    "population": "32938213"
+  },
+  "Senegal": {
+    "alpha3": "SEN",
+    "alpha2": "SN",
+    "flag": "🇸🇳",
+    "population": "15850567"
+  },
+  "Argentina": {
+    "alpha3": "ARG",
+    "alpha2": "AR",
+    "flag": "🇦🇷",
+    "population": "44271041"
+  },
+  "Chile": {
+    "alpha3": "CHL",
+    "alpha2": "CL",
+    "flag": "🇨🇱",
+    "population": "18054726"
+  },
+  "Jordan": {
+    "alpha3": "JOR",
+    "alpha2": "JO",
+    "flag": "🇯🇴",
+    "population": "9702353"
+  },
+  "Ukraine": {
+    "alpha3": "UKR",
+    "alpha2": "UA",
+    "flag": "🇺🇦",
+    "population": "44222947"
+  },
+  "Hungary": {
+    "alpha3": "HUN",
+    "alpha2": "HU",
+    "flag": "🇭🇺",
+    "population": "9721559"
+  },
+  "Liechtenstein": {
+    "alpha3": "LIE",
+    "alpha2": "LI",
+    "flag": "🇱🇮",
+    "population": "37922"
+  },
+  "Poland": {
+    "alpha3": "POL",
+    "alpha2": "PL",
+    "flag": "🇵🇱",
+    "population": "38170712"
+  },
+  "Tunisia": {
+    "alpha3": "TUN",
+    "alpha2": "TN",
+    "flag": "🇹🇳",
+    "population": "11532127"
+  },
+  "Bosnia and Herzegovina": {
+    "alpha3": "BIH",
+    "alpha2": "BA",
+    "flag": "🇧🇦",
+    "population": "3507017"
+  },
+  "Slovenia": {
+    "alpha3": "SVN",
+    "alpha2": "SI",
+    "flag": "🇸🇮",
+    "population": "2079976"
+  },
+  "South Africa": {
+    "alpha3": "ZAF",
+    "alpha2": "ZA",
+    "flag": "🇿🇦",
+    "population": "56717156"
+  },
+  "Bhutan": {
+    "alpha3": "BTN",
+    "alpha2": "BT",
+    "flag": "🇧🇹",
+    "population": "807610"
+  },
+  "Cameroon": {
+    "alpha3": "CMR",
+    "alpha2": "CM",
+    "flag": "🇨🇲",
+    "population": "24053727"
+  },
+  "Colombia": {
+    "alpha3": "COL",
+    "alpha2": "CO",
+    "flag": "🇨🇴",
+    "population": "49065615"
+  },
+  "Costa Rica": {
+    "alpha3": "CRI",
+    "alpha2": "CR",
+    "flag": "🇨🇷",
+    "population": "4905769"
+  },
+  "Peru": {
+    "alpha3": "PER",
+    "alpha2": "PE",
+    "flag": "🇵🇪",
+    "population": "32165485"
+  },
+  "Serbia": {
+    "alpha3": "SRB",
+    "alpha2": "RS",
+    "flag": "🇷🇸",
+    "population": "8745263"
+  },
+  "Slovakia": {
+    "alpha3": "SVK",
+    "alpha2": "SK",
+    "flag": "🇸🇰",
+    "population": "5447662"
+  },
+  "Togo": {
+    "alpha3": "TGO",
+    "alpha2": "TG",
+    "flag": "🇹🇬",
+    "population": "7797694"
+  },
+  "Malta": {
+    "alpha3": "MLT",
+    "alpha2": "MT",
+    "flag": "🇲🇹",
+    "population": "430835"
+  },
+  "Martinique": {
+    "alpha3": "MTQ",
+    "alpha2": "MQ",
+    "flag": "🇲🇶",
+    "population": "384896"
+  },
+  "Bulgaria": {
+    "alpha3": "BGR",
+    "alpha2": "BG",
+    "flag": "🇧🇬",
+    "population": "7084571"
+  },
+  "Maldives": {
+    "alpha3": "MDV",
+    "alpha2": "MV",
+    "flag": "🇲🇻",
+    "population": "436330"
+  },
+  "Bangladesh": {
+    "alpha3": "BGD",
+    "alpha2": "BD",
+    "flag": "🇧🇩",
+    "population": "164669751"
+  },
+  "Paraguay": {
+    "alpha3": "PRY",
+    "alpha2": "PY",
+    "flag": "🇵🇾",
+    "population": "6811297"
+  },
+  "Albania": {
+    "alpha3": "ALB",
+    "alpha2": "AL",
+    "flag": "🇦🇱",
+    "population": "2930187"
+  },
+  "Cyprus": {
+    "alpha3": "CYP",
+    "alpha2": "CY",
+    "flag": "🇨🇾",
+    "population": "1179551"
+  },
+  "Brunei": {
+    "alpha3": "BRN",
+    "alpha2": "BN",
+    "flag": "🇧🇳",
+    "population": "428697"
+  },
+  "US": {
+    "alpha3": "USA",
+    "alpha2": "US",
+    "flag": "🇺🇸",
+    "population": "324459463"
+  },
+  "Burkina Faso": {
+    "alpha3": "BFA",
+    "alpha2": "BF",
+    "flag": "🇧🇫",
+    "population": "19193382"
+  },
+  "Holy See": {
+    "alpha3": "VAT",
+    "alpha2": "VA",
+    "flag": "🇻🇦",
+    "population": "1000"
+  },
+  "Mongolia": {
+    "alpha3": "MNG",
+    "alpha2": "MN",
+    "flag": "🇲🇳",
+    "population": "3075647"
+  },
+  "Panama": {
+    "alpha3": "PAN",
+    "alpha2": "PA",
+    "flag": "🇵🇦",
+    "population": "4098587"
+  },
+  "China": {
+    "alpha3": "CHN",
+    "alpha2": "CN",
+    "flag": "🇨🇳",
+    "population": "1409517397"
+  },
+  "Iran": {
+    "alpha3": "IRN",
+    "alpha2": "IR",
+    "flag": "🇮🇷",
+    "population": "81162788"
+  },
+  "Korea, South": {
+    "alpha3": "KOR",
+    "alpha2": "KR",
+    "flag": "🇰🇷",
+    "population": "50982212"
+  },
+  "France": {
+    "alpha3": "FRA",
+    "alpha2": "FR",
+    "flag": "🇫🇷",
+    "population": "64979548"
+  },
+  "Cruise Ship": {
+    "alpha3": "SHP",
+    "flag": "🚢"
+  },
+  "Denmark": {
+    "alpha3": "DNK",
+    "alpha2": "DK",
+    "flag": "🇩🇰",
+    "population": "5733551"
+  },
+  "Czechia": {
+    "alpha3": "CZE",
+    "alpha2": "CZ",
+    "flag": "🇨🇿",
+    "population": "10618303"
+  },
+  "Taiwan*": {
+    "alpha3": "TWN",
+    "alpha2": "TW",
+    "flag": "🇹🇼",
+    "population": "23807042"
+  },
+  "Vietnam": {
+    "alpha3": "VNM",
+    "alpha2": "VN",
+    "flag": "🇻🇳",
+    "population": "95540800"
+  },
+  "Russia": {
+    "alpha3": "RUS",
+    "alpha2": "RU",
+    "flag": "🇷🇺",
+    "population": "143989754"
+  },
+  "Moldova": {
+    "alpha3": "MDA",
+    "alpha2": "MD",
+    "flag": "🇲🇩",
+    "population": "4051212"
+  },
+  "Bolivia": {
+    "alpha3": "BOL",
+    "alpha2": "BO",
+    "flag": "🇧🇴",
+    "population": "11051600"
+  },
+  "Honduras": {
+    "alpha3": "HND",
+    "alpha2": "HN",
+    "flag": "🇭🇳",
+    "population": "9265067"
+  },
+  "United Kingdom": {
+    "alpha3": "GBR",
+    "alpha2": "GB",
+    "flag": "🇬🇧",
+    "population": "66181585"
+  },
+  "Congo (Kinshasa)": {
+    "alpha3": "COD",
+    "alpha2": "CD",
+    "flag": "🇨🇩",
+    "population": null
+  },
+  "Cote d'Ivoire": {
+    "alpha3": "CIV",
+    "alpha2": "CI",
+    "flag": "🇨🇮",
+    "population": "24294750"
+  },
+  "Jamaica": {
+    "alpha3": "JAM",
+    "alpha2": "JM",
+    "flag": "🇯🇲",
+    "population": "2890299"
+  },
+  "Turkey": {
+    "alpha3": "TUR",
+    "alpha2": "TR",
+    "flag": "🇹🇷",
+    "population": "80745020"
+  },
+  "Cuba": {
+    "alpha3": "CUB",
+    "alpha2": "CU",
+    "flag": "🇨🇺",
+    "population": "11484636"
+  },
+  "Guyana": {
+    "alpha3": "GUY",
+    "alpha2": "GY",
+    "flag": "🇬🇾",
+    "population": "777859"
+  },
+  "Kazakhstan": {
+    "alpha3": "KAZ",
+    "alpha2": "KZ",
+    "flag": "🇰🇿",
+    "population": "18204499"
+  },
+  "Ethiopia": {
+    "alpha3": "ETH",
+    "alpha2": "ET",
+    "flag": "🇪🇹",
+    "population": "104957438"
+  },
+  "Sudan": {
+    "alpha3": "SDN",
+    "alpha2": "SD",
+    "flag": "🇸🇩",
+    "population": "40533330"
+  },
+  "Guinea": {
+    "alpha3": "GIN",
+    "alpha2": "GN",
+    "flag": "🇬🇳",
+    "population": "12717176"
+  },
+  "Kenya": {
+    "alpha3": "KEN",
+    "alpha2": "KE",
+    "flag": "🇰🇪",
+    "population": "49699862"
+  },
+  "Antigua and Barbuda": {
+    "alpha3": "ATG",
+    "alpha2": "AG",
+    "flag": "🇦🇬",
+    "population": "102012"
+  },
+  "Uruguay": {
+    "alpha3": "URY",
+    "alpha2": "UY",
+    "flag": "🇺🇾",
+    "population": "3456750"
+  },
+  "Ghana": {
+    "alpha3": "GHA",
+    "alpha2": "GH",
+    "flag": "🇬🇭",
+    "population": "28833629"
+  },
+  "Namibia": {
+    "alpha3": "NAM",
+    "alpha2": "NA",
+    "flag": "🇳🇦",
+    "population": "2533794"
+  },
+  "Seychelles": {
+    "alpha3": "SYC",
+    "alpha2": "SC",
+    "flag": "🇸🇨",
+    "population": "94737"
+  },
+  "Trinidad and Tobago": {
+    "alpha3": "TTO",
+    "alpha2": "TT",
+    "flag": "🇹🇹",
+    "population": "1369125"
+  },
+  "Venezuela": {
+    "alpha3": "VEN",
+    "alpha2": "VE",
+    "flag": "🇻🇪",
+    "population": "31977065"
+  },
+  "Eswatini": {
+    "alpha3": "SWZ",
+    "alpha2": "SZ",
+    "flag": "🇸🇿",
+    "population": "1008000"
+  },
+  "Gabon": {
+    "alpha3": "GAB",
+    "alpha2": "GA",
+    "flag": "🇬🇦",
+    "population": "2025137"
+  },
+  "Guatemala": {
+    "alpha3": "GTM",
+    "alpha2": "GT",
+    "flag": "🇬🇹",
+    "population": "16913503"
+  },
+  "Mauritania": {
+    "alpha3": "MRT",
+    "alpha2": "MR",
+    "flag": "🇲🇷",
+    "population": "4420184"
+  },
+  "Rwanda": {
+    "alpha3": "RWA",
+    "alpha2": "RW",
+    "flag": "🇷🇼",
+    "population": "12208407"
+  },
+  "Saint Lucia": {
+    "alpha3": "LCA",
+    "alpha2": "LC",
+    "flag": "🇱🇨",
+    "population": "178844"
+  },
+  "Saint Vincent and the Grenadines": {
+    "alpha3": "VCT",
+    "alpha2": "VC",
+    "flag": "🇻🇨",
+    "population": "109897"
+  },
+  "Suriname": {
+    "alpha3": "SUR",
+    "alpha2": "SR",
+    "flag": "🇸🇷",
+    "population": "563402"
+  },
+  "Kosovo": {
+    "alpha3": "RKS",
+    "flag": "🚢"
+  },
+  "Central African Republic": {
+    "alpha3": "CAF",
+    "alpha2": "CF",
+    "flag": "🇨🇫",
+    "population": "4659080"
+  },
+  "Congo (Brazzaville)": {
+    "alpha3": "COG",
+    "alpha2": "CG",
+    "flag": "🇨🇬",
+    "population": "5260750"
+  },
+  "Equatorial Guinea": {
+    "alpha3": "GNQ",
+    "alpha2": "GQ",
+    "flag": "🇬🇶",
+    "population": "1267689"
+  },
+  "Uzbekistan": {
+    "alpha3": "UZB",
+    "alpha2": "UZ",
+    "flag": "🇺🇿",
+    "population": "31910641"
+  },
+  "Netherlands": {
+    "alpha3": "NLD",
+    "alpha2": "NL",
+    "flag": "🇳🇱",
+    "population": "17035938"
+  },
+  "Benin": {
+    "alpha3": "BEN",
+    "alpha2": "BJ",
+    "flag": "🇧🇯",
+    "population": "11175692"
+  },
+  "Liberia": {
+    "alpha3": "LBR",
+    "alpha2": "LR",
+    "flag": "🇱🇷",
+    "population": "4731906"
+  },
+  "Somalia": {
+    "alpha3": "SOM",
+    "alpha2": "SO",
+    "flag": "🇸🇴",
+    "population": "14742523"
+  },
+  "Tanzania": {
+    "alpha3": "TZA",
+    "alpha2": "TZ",
+    "flag": "🇹🇿",
+    "population": "57310019"
+  },
+  "Barbados": {
+    "alpha3": "BRB",
+    "alpha2": "BB",
+    "flag": "🇧🇧",
+    "population": "285719"
+  },
+  "Montenegro": {
+    "alpha3": "MNE",
+    "alpha2": "ME",
+    "flag": "🇲🇪"
+  },
+  "Kyrgyzstan": {
+    "alpha3": "KGZ",
+    "alpha2": "KG",
+    "flag": "🇰🇬",
+    "population": "6045117"
+  },
+  "Mauritius": {
+    "alpha3": "MUS",
+    "alpha2": "MU",
+    "flag": "🇲🇺",
+    "population": "1265138"
+  },
+  "Zambia": {
+    "alpha3": "ZMB",
+    "alpha2": "ZM",
+    "flag": "🇿🇲",
+    "population": "17094130"
+  },
+  "Djibouti": {
+    "alpha3": "DJI",
+    "alpha2": "DJ",
+    "flag": "🇩🇯",
+    "population": "956985"
+  },
+  "Gambia, The": {
+    "alpha3": "GMB",
+    "alpha2": "GM",
+    "flag": "🇬🇲",
+    "population": "2100568"
+  },
+  "Gambia": {
+    "alpha3": "GMB",
+    "alpha2": "GM",
+    "flag": "🇬🇲",
+    "population": "2100568"
+  },
+  "Bahamas, The": {
+    "alpha3": "BHS",
+    "alpha2": "BS",
+    "flag": "🇧🇸",
+    "population": "395361"
+  },
+  "Bahamas": {
+    "alpha3": "BHS",
+    "alpha2": "BS",
+    "flag": "🇧🇸",
+    "population": "395361"
+  },
+  "Chad": {
+    "alpha3": "TCD",
+    "alpha2": "TD",
+    "flag": "🇹🇩",
+    "population": "14899994"
+  },
+  "El Salvador": {
+    "alpha3": "SLV",
+    "alpha2": "SV",
+    "flag": "🇸🇻",
+    "population": "6377853"
+  },
+  "Fiji": {
+    "alpha3": "FJI",
+    "alpha2": "FJ",
+    "flag": "🇫🇯",
+    "population": "905502"
+  },
+  "Nicaragua": {
+    "alpha3": "NIC",
+    "alpha2": "NI",
+    "flag": "🇳🇮",
+    "population": "6217581"
+  },
+  "Haiti": {
+    "alpha3": "HTI",
+    "alpha2": "HT",
+    "flag": "🇭🇹",
+    "population": "10981229"
+  },
+  "Syria": {
+    "alpha3": "SYR",
+    "alpha2": "SY",
+    "flag": "🇸🇾",
+    "population": "18269868"
+  },
+  "Angola": {
+    "alpha3": "AGO",
+    "alpha2": "AO",
+    "flag": "🇦🇴",
+    "population": "29784193"
+  },
+  "Madagascar": {
+    "alpha3": "MDG",
+    "alpha2": "MG",
+    "flag": "🇲🇬",
+    "population": "25570895"
+  },
+  "Cabo Verde": {
+    "alpha3": "CPV",
+    "alpha2": "CV",
+    "flag": "🇨🇻",
+    "population": "546388"
+  },
+  "Niger": {
+    "alpha3": "NER",
+    "alpha2": "NE",
+    "flag": "🇳🇪",
+    "population": "21477348"
+  },
+  "Papua New Guinea": {
+    "alpha3": "PNG",
+    "alpha2": "PG",
+    "flag": "🇵🇬",
+    "population": "8251162"
+  },
+  "Zimbabwe": {
+    "alpha3": "ZWE",
+    "alpha2": "ZW",
+    "flag": "🇿🇼",
+    "population": "16529904"
+  },
+  "Cape Verde": {
+    "alpha3": "CBV",
+    "flag": "🚢",
+    "population": "546388"
+  },
+  "East Timor": {
+    "alpha3": "ETL",
+    "flag": "🚢",
+    "population": "1296311"
+  },
+  "Uganda": {
+    "alpha3": "UGA",
+    "alpha2": "UG",
+    "flag": "🇺🇬",
+    "population": "42862958"
+  },
+  "Dominica": {
+    "alpha3": "DMA",
+    "alpha2": "DM",
+    "flag": "🇩🇲",
+    "population": "73925"
+  },
+  "Grenada": {
+    "alpha3": "GRD",
+    "alpha2": "GD",
+    "flag": "🇬🇩",
+    "population": "107825"
+  },
+  "Mozambique": {
+    "alpha3": "MOZ",
+    "alpha2": "MZ",
+    "flag": "🇲🇿",
+    "population": "29668834"
+  },
+  "Timor-Leste": {
+    "alpha3": "TLS",
+    "alpha2": "TL",
+    "flag": "🇹🇱"
+  },
+  "Eritrea": {
+    "alpha3": "ERI",
+    "alpha2": "ER",
+    "flag": "🇪🇷",
+    "population": "5068831"
+  },
+  "Belize": {
+    "alpha3": "BLZ",
+    "alpha2": "BZ",
+    "flag": "🇧🇿",
+    "population": "374681"
+  },
+  "Diamond Princess": {
+    "alpha3": "DPS",
+    "flag": "🚢"
+  },
+  "Laos": {
+    "alpha3": "LAO",
+    "alpha2": "LA",
+    "flag": "🇱🇦",
+    "population": "6858160"
+  },
+  "Libya": {
+    "alpha3": "LBY",
+    "alpha2": "LY",
+    "flag": "🇱🇾",
+    "population": "5605000"
+  },
+  "The West Bank and Gaza": {
+    "alpha3": "WBG",
+    "flag": "🚢"
+  },
+  "Guinea-Bissau": {
+    "alpha3": "GNB",
+    "alpha2": "GW",
+    "flag": "🇬🇼",
+    "population": "1861283"
+  },
+  "Mali": {
+    "alpha3": "MLI",
+    "alpha2": "ML",
+    "flag": "🇲🇱",
+    "population": "18541980"
+  },
+  "Saint Kitts and Nevis": {
+    "alpha3": "KNA",
+    "alpha2": "KN",
+    "flag": "🇰🇳",
+    "population": "55345"
+  },
+  "West Bank and Gaza": {
+    "alpha3": "WBG",
+    "flag": "🚢"
+  },
+  "Burma": {
+    "alpha3": "MMR",
+    "alpha2": "MM",
+    "flag": "🇲🇲",
+    "population": "53370609"
+  },
+  "Myanmar": {
+    "alpha3": "MMR",
+    "alpha2": "MM",
+    "flag": "🇲🇲",
+    "population": "53370609"
+  },
+  "MS Zaandam": {
+    "alpha3": "MSZ",
+    "flag": "🚢"
+  },
+  "Botswana": {
+    "alpha3": "BWA",
+    "alpha2": "BW",
+    "flag": "🇧🇼",
+    "population": "2291661"
+  },
+  "Sierra Leone": {
+    "alpha3": "SLE",
+    "alpha2": "SL",
+    "flag": "🇸🇱",
+    "population": "7557212"
+  },
+  "Burundi": {
+    "alpha3": "BDI",
+    "alpha2": "BI",
+    "flag": "🇧🇮",
+    "population": "10864245"
+  },
+  "Malawi": {
+    "alpha3": "MWI",
+    "alpha2": "MW",
+    "flag": "🇲🇼",
+    "population": "18622104"
+  },
+  "South Sudan": {
+    "alpha3": "SSD",
+    "alpha2": "SS",
+    "flag": "🇸🇸",
+    "population": "12575714"
+  },
+  "Western Sahara": {
+    "alpha3": "ESH",
+    "alpha2": "EH",
+    "flag": "🇪🇭",
+    "population": "552628"
+  },
+  "Sao Tome and Principe": {
+    "alpha3": "STP",
+    "alpha2": "ST",
+    "flag": "🇸🇹",
+    "population": "204327"
+  }
+}

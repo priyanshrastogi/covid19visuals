@@ -1,8 +1,11 @@
 import React from 'react';
 import { useTable, useSortBy, usePagination } from 'react-table';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
-export default function CovidTable(props) {
+function CovidTable(props) {
+
+  const [selectedRow, setSelectedRow] = React.useState(null);
   
   let columns = [
     {
@@ -31,9 +34,15 @@ export default function CovidTable(props) {
     },
   ]
 
+  if(props.isGlobalTable) {
+    columns.push({Header: 'Infected / Mil Pop', accessor: 'infPopRatio', sortDescFirst: true});
+    columns.push({Header: 'Deaths / Mil Pop', accessor: 'deathsPopRatio', sortDescFirst: true});
+    columns.push({Header: 'Code', accessor: 'code'});
+  }
+
   columns = React.useMemo(() => columns, []);
   const data = React.useMemo(() => props.data, []);
-  const initialState = {sortBy: [{id: 'confirmed', desc: true}], pageIndex: 0, pageSize: props.pageSize};
+  const initialState = {sortBy: [{id: 'confirmed', desc: true}], pageIndex: 0, pageSize: props.pageSize, hiddenColumns: ['code']};
 
   const {
     getTableProps,
@@ -59,6 +68,12 @@ export default function CovidTable(props) {
     useSortBy,
     usePagination
   )
+
+  const handleRowClick = (row) => {
+    setSelectedRow(row[props.headerAccessor]);
+    if(props.isGlobalTable)
+      props.history.push(`/${row.code.toLowerCase()}`);
+  }
   
   return (
     <div className="table-container">
@@ -69,7 +84,7 @@ export default function CovidTable(props) {
               {headerGroup.headers.map(column => (
                 // Add the sorting props to control sorting. For this example
                 // we can add them into the header props
-                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                <th className="is-size-7-mobile has-background-grey-dark has-text-white" {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render('Header')}
                   {/* Add a sort direction indicator */}
                   <span>
@@ -89,10 +104,10 @@ export default function CovidTable(props) {
             (row, i) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()}>
+                <tr onClick={() => handleRowClick(row.values)} {...row.getRowProps()} className={selectedRow === row.values[props.headerAccessor] ? 'is-selected' : ''}>
                   {row.cells.map(cell => {
                     return (
-                      <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                      <td {...cell.getCellProps()} className="is-size-7-mobile">{cell.render('Cell')}</td>
                     )
                   })}
                 </tr>
@@ -139,13 +154,17 @@ export default function CovidTable(props) {
   )
 } 
 
+export default withRouter(CovidTable);
+
 CovidTable.propTypes = {
   headerColumn: PropTypes.string.isRequired,
   headerAccessor: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
-  pageSize: PropTypes.number
+  pageSize: PropTypes.number,
+  isGlobalTable: PropTypes.bool
 }
 
 CovidTable.defaultProps = {
-  pageSize: 10
+  pageSize: 10,
+  isGlobalTable: false
 }

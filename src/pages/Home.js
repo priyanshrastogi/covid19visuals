@@ -34,8 +34,11 @@ function Home(props) {
         <SeachCountryTile />
         <div className="columns">
           <div className="column is-three-fifths is-offset-one-fifth">
+            <div style={{marginBottom: 20}}>
+              <Notification content={<span><strong>Tip: </strong>Click or Tap on row to view detailed situation in individual countries.</span>} type='success'/>
+            </div>
             {props.countrywiseCovid.length !== 0 ?
-            <CovidTable data={props.countrywiseCovid} headerColumn='Country/Region' headerAccessor='country'/>
+            <CovidTable data={props.countrywiseCovid} headerColumn='Country/Region' headerAccessor='country' isGlobalTable/>
             :
             null}
           </div>

@@ -11,6 +11,7 @@ import Page404 from './pages/Page404';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/NavBar';
+import CountryCovid from './pages/CountryCovid';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route exact path='/' component={Home}/>
               <Route exact path='/about' component={About}/>
               <Route exact path='/india' component={IndiaCovid} />
+              <Route exact path='/:countryCode' component={CountryCovid} />
               <Route component={Page404} />
             </Switch>
           </ScrollToTop>

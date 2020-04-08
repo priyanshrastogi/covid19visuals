@@ -1,4 +1,4 @@
-import * as countryCodes from '../data/countryToISO.json';
+import countryInfo from '../data/countries';
 
 export const getLatestGlobalData = (data) => {
   let date;
@@ -29,8 +29,34 @@ export const getLatestCountrywiseData = (data) => {
     const deaths = latest.deaths;
     const recovered = latest.recovered;
     const active = confirmed - deaths - recovered;
-    const id = countryCodes.default[country];
-    latestCountrywiseData.push({date, country, confirmed, deaths, recovered, active, id});
+    const id = countryInfo[country] ? countryInfo[country].alpha3 : null;
+    const code = countryInfo[country] ? countryInfo[country].alpha2 : null;
+    const flag = countryInfo[country] ? countryInfo[country].flag : null;
+    if(id === null) {
+      console.log('Missing Country: '+country);
+    }
+    let infPopRatio, deathsPopRatio;
+    if(countryInfo[country] && countryInfo[country].population) {
+      infPopRatio = (confirmed/countryInfo[country].population)*1000000;
+      if(infPopRatio<1) {
+        infPopRatio = infPopRatio.toFixed(1);
+      }
+      else {
+        infPopRatio = Math.round(infPopRatio);
+      }
+      deathsPopRatio = (deaths/countryInfo[country].population)*1000000;
+      if(deathsPopRatio<1) {
+        deathsPopRatio = deathsPopRatio.toFixed(1);
+      }
+      else {
+        deathsPopRatio = Math.round(deathsPopRatio);
+      }
+    }
+    else {
+      infPopRatio = NaN;
+      deathsPopRatio = NaN;
+    }
+    latestCountrywiseData.push({date, country, confirmed, deaths, recovered, active, id, infPopRatio, deathsPopRatio, flag, code});
   }
   return latestCountrywiseData;
 }

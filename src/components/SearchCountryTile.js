@@ -28,7 +28,7 @@ function SeachCountryTile(props) {
           {selectedCountry ? 
           <div>
             <div className="has-text-centered" style={{padding: 10}}>
-              <p className="title is-5">{props.countrywiseCovid[selectedCountry].country}</p>
+              <p className="title is-5"><span style={{marginRight: 20, marginLeft: -20}}>{props.countrywiseCovid[selectedCountry].flag}</span>{props.countrywiseCovid[selectedCountry].country}</p>
             </div>
             <div className="columns is-mobile is-multiline">
               <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
