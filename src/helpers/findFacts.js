@@ -17,33 +17,66 @@ const findHighestCDRDelta = (timeseriesDeltaData) => {
   return [cIndex, dIndex, rIndex];
 }
 
-const findMinMaxCurveSlope = (timeseriesData, x) => {
+const findMinMaxCurveSlope = (timeseriesData, x, type) => {
   let minSlope = Number.MAX_VALUE;
   let maxSlope = Number.MIN_VALUE;
   const slopes = [];
   let maxSlopeIndex = 0, minSlopeIndex = 0;
-  for(let i=x-1; i<timeseriesData.length; i++) {
-    const startDate = timeseriesData[i-x+1].date;
+  for(let i=x; i<timeseriesData.length; i++) {
+    const startDate = timeseriesData[i-x].date;
     const endDate = timeseriesData[i].date;
-    const slope = (timeseriesData[i].confirmed-timeseriesData[i-x+1].confirmed)/(x-1);
-    slopes.push({startDate, endDate, slope});
+    const slope = Math.round((timeseriesData[i][type]-timeseriesData[i-x][type])/(x));
+    const total = timeseriesData[i][type]-timeseriesData[i-x][type];
+    slopes.push({startDate, endDate, slope, total});
     if(slope > maxSlope) {
       maxSlope = slope;
-      maxSlopeIndex = i-x+1;
+      maxSlopeIndex = i-x;
     }
     if(slope < minSlope) {
       minSlope = slope;
-      minSlopeIndex = i-x+1;
+      minSlopeIndex = i-x;
     }
   }
   return {min: slopes[minSlopeIndex], max: slopes[maxSlopeIndex]};
 }
 
-export const findGlobalFacts = (timeseriesData, timeseriesDeltaData) => {
+const findRatesAndRatio = (timeseriesData, days, type) => {
+  const result = {};
+  const numDaysInf = timeseriesData[timeseriesData.length-1-days][type];
+  const curInf = timeseriesData[timeseriesData.length-1][type];
+  result.ratio = (curInf/numDaysInf).toFixed(2);
+  result.rate = Math.round((curInf-numDaysInf)/days);
+  return result;
+}
+
+export const findFacts = (timeseriesData, timeseriesDeltaData) => {
   const facts = {};
   const [ci, di, ri] = findHighestCDRDelta(timeseriesDeltaData);
   facts.highestConfirmed = timeseriesDeltaData[ci];
   facts.highestDeaths = timeseriesDeltaData[di];
-  facts.minMaxDeltaSlope = findMinMaxCurveSlope(timeseriesDeltaData, 7);
+  facts.minMaxConfirmedSlope = {7: findMinMaxCurveSlope(timeseriesData, 7, 'confirmed'), 15: findMinMaxCurveSlope(timeseriesData, 15, 'confirmed'), 30: findMinMaxCurveSlope(timeseriesData, 30, 'confirmed')};
+  facts.minMaxDeathsSlope = {7: findMinMaxCurveSlope(timeseriesData, 7, 'deaths'), 15: findMinMaxCurveSlope(timeseriesData, 15, 'deaths'), 30: findMinMaxCurveSlope(timeseriesData, 30, 'deaths')};
+  facts.ratioRateConfirmed = {7: findRatesAndRatio(timeseriesData, 7, 'confirmed'), 15: findRatesAndRatio(timeseriesData, 15, 'confirmed'), 30: findRatesAndRatio(timeseriesData, 30, 'confirmed')};
+  facts.ratioRateDeaths = {7: findRatesAndRatio(timeseriesData, 7, 'deaths'), 15: findRatesAndRatio(timeseriesData, 15, 'deaths'), 30: findRatesAndRatio(timeseriesData, 30, 'deaths')};
+  facts.latestActive = {7: findRatesAndRatio(timeseriesData, 7, 'active')};
   return facts;
+}
+
+export const findCountrywiseFacts = (timeseriesData, timeseriesDeltaData) => {
+  const facts = {};
+  for(let i=0; i<timeseriesData.length; i++) {
+    facts[timeseriesData[i].country.toLowerCase()] = findFacts(timeseriesData[i].data, timeseriesDeltaData[i].data);
+  }
+  return facts;
+}
+
+export const findFlatCurveCountries = (timeseriesData) => {
+  const countries = [];
+  for(let i=0; i<timeseriesData.length; i++) {
+    const active = findRatesAndRatio(timeseriesData[i].data, 7, 'active').rate;
+    if(active<=0) {
+      countries.push({country: timeseriesData[i].country, active});
+    }
+  }
+  return countries;
 }

@@ -9,6 +9,7 @@ import SeachCountryTile from '../components/SearchCountryTile';
 import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
 import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph';
 import Notification from '../components/Notification';
+import CovidCurveAnalysis from '../components/CovidCurveAnalysis';
 
 function Home(props) {
   
@@ -28,6 +29,7 @@ function Home(props) {
       </div>
       <div className="container">
         <CovidTimeSeriesGraph covidTimeSeries={props.globalCovidTimeSeries} covidTimeSeriesDelta={props.globalCovidDailyDelta} title='Global Charts'/>
+        <CovidCurveAnalysis />
       </div>
       <Hero type='info' title='Country-wise Information' subtitle='Daily Updates, Facts and Analysis' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function SeachCountryTile(props) {
   
@@ -55,6 +56,9 @@ function SeachCountryTile(props) {
                   <p className="title is-5">{props.countrywiseCovid[selectedCountry].active}</p>
                 </div>
               </div>
+            </div>
+            <div className="has-text-centered">
+              <Link to={`/${props.countrywiseCovid[selectedCountry].code.toLowerCase()}`}>View Detailed Situation</Link>
             </div>
           </div>
           :

@@ -9,12 +9,10 @@ export default function CovidTimeSeriesGraph(props) {
   const [duration, setDuration] = useState('all');
   const [timeseries, setTimeseries] = useState(props.covidTimeSeries);
   const [deltaseries, setDeltaseries] = useState(props.covidTimeSeriesDelta);
-  const [curveAnalysis, setCurveAnalysis] = useState({});
 
   useEffect(() => {
     setTimeseries(props.covidTimeSeries);
     setDeltaseries(props.covidTimeSeriesDelta);
-    analyseCurve(props.covidTimeSeries, props.covidTimeSeriesDelta);
   }, [props.covidTimeSeries, props.covidTimeSeriesDelta]);
 
   const handleTypeChange = (e) => {
@@ -35,22 +33,6 @@ export default function CovidTimeSeriesGraph(props) {
       setTimeseries(props.covidTimeSeries.slice(Math.max(props.covidTimeSeries.length - 15, 0)));
       setDeltaseries(props.covidTimeSeriesDelta.slice(Math.max(props.covidTimeSeriesDelta.length - 15, 0)));
     }
-  }
-
-  const analyseCurve = (timeseriesData, deltaseriesData) => {
-    const result = {};
-    if(timeseriesData && Array.isArray(timeseriesData) && timeseriesData.length !== 0) {
-      console.log(timeseriesData);
-      const num7Inf = timeseriesData[timeseriesData.length-1-7].confirmed;
-      const num15Inf = timeseriesData[timeseriesData.length-1-15].confirmed;
-      const num30Inf = timeseriesData[timeseriesData.length-1-30].confirmed;
-      const curInf = timeseriesData[timeseriesData.length-1].confirmed;
-      console.log(num30Inf, num15Inf, num7Inf, curInf);
-      result.ratio7 = (curInf/num7Inf).toFixed(2);
-      result.ratio15 = (curInf/num15Inf).toFixed(2);
-      result.ratio30 = (curInf/num30Inf).toFixed(2);
-    }
-    setCurveAnalysis(result);
   }
 
   const colorMap = {
@@ -106,12 +88,6 @@ export default function CovidTimeSeriesGraph(props) {
           <button class={`button is-small ${duration === '1m' ? 'is-dark is-selected' : ''}`} onClick={() => handleDurationChange('1m')}>1M</button>
           <button class={`button is-small ${duration === '15d' ? 'is-dark is-selected' : ''}`} onClick={() => handleDurationChange('15d')}>15D</button>
         </div>
-      </div>
-      <div style={{margin: 20, padding: 20}} className="card notification is-dark is-light">
-        <p className="title is-5">Curve Analysis</p>
-        <p>In last 7 days, number of infected people have increased {curveAnalysis.ratio7} times.</p>
-        <p>In last 15 days, number of infected people have increased {curveAnalysis.ratio15} times.</p>
-        <p>In last 30 days, number of infected people have increased {curveAnalysis.ratio30} times.</p>
       </div>
     </div>
   )

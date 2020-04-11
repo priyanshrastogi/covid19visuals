@@ -8,6 +8,7 @@ import globalCovidDailyDelta from './globalCovidDailyDelta';
 import countrywiseCovidDailyDelta from './countrywiseCovidDailyDelta';
 import indiaCovid from './indiaCovid';
 import facts from './facts';
+import flatcurvecountries from './flatcurvecountries';
 
 export default combineReducers({
   globalCovid,
@@ -18,5 +19,6 @@ export default combineReducers({
   globalCovidDailyDelta,
   countrywiseCovidDailyDelta,
   indiaCovid,
-  facts
+  facts,
+  flatcurvecountries
 });

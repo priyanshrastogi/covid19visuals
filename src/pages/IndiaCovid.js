@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import IndiaCovidCounter from '../components/IndiaCovidCounter';
 import CovidTable from '../components/CovidTable';
 import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
+import CovidCurveAnalysis from '../components/CovidCurveAnalysis';
 
 function IndiaCovid(props) {
   
@@ -28,6 +29,7 @@ function IndiaCovid(props) {
       </div>
       <div className="container" style={{marginTop: 40}}>
         <CovidTimeSeriesGraph covidTimeSeries={props.indiaCovid.timeseries} covidTimeSeriesDelta={props.indiaCovid.timeseriesDelta} title='India Charts'/>
+        <CovidCurveAnalysis />
       </div>
       <Hero type='success' title='State-wise Information' subtitle='District-level information is coming soon' date={datetime} dontadd30/>
       <div style={{marginTop: 40}} className="container is-fluid">

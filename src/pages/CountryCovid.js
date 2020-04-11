@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
 import CountryCovidCounter from '../components/CountryCovidCounter';
 import { Redirect } from 'react-router-dom';
+import CovidCurveAnalysis from '../components/CovidCurveAnalysis';
 
 function CountryCovid(props) {
 
@@ -17,15 +18,15 @@ function CountryCovid(props) {
 
   let countryData = null, countryTimeSeries = null, countryCovidDelta = null;
   if(props.countrywiseCovid && props.countries)
-    countryData = props.countrywiseCovid[props.countries[codeToName[props.match.params.countryCode].toLowerCase()]];
+    countryData = props.countrywiseCovid[props.countries[codeToName[props.match.params.countryCode.toLowerCase()].toLowerCase()]];
 
   if(props.countrywiseCovidTimeSeries && props.countries)
-    countryTimeSeries = props.countrywiseCovidTimeSeries[props.countries[codeToName[props.match.params.countryCode].toLowerCase()]];
+    countryTimeSeries = props.countrywiseCovidTimeSeries[props.countries[codeToName[props.match.params.countryCode.toLowerCase()].toLowerCase()]];
 
   if(props.countrywiseCovidDailyDelta && props.countries)
-    countryCovidDelta = props.countrywiseCovidDailyDelta[props.countries[codeToName[props.match.params.countryCode].toLowerCase()]];
+    countryCovidDelta = props.countrywiseCovidDailyDelta[props.countries[codeToName[props.match.params.countryCode.toLowerCase()].toLowerCase()]];
 
-  if(props.match.params.countryCode === 'in') {
+  if(props.match.params.countryCode.toLowerCase() === 'in') {
     return <Redirect to='/india'/>
   }
 
@@ -36,7 +37,8 @@ function CountryCovid(props) {
         <CountryCovidCounter covidData={countryData}/>
       </div>
       <div className="container" style={{marginTop: 40}}>
-        {<CovidTimeSeriesGraph covidTimeSeries={countryTimeSeries ? countryTimeSeries.data : []} covidTimeSeriesDelta={countryCovidDelta ? countryCovidDelta.data : []} title={`${codeToName[props.match.params.countryCode]} Charts`}/>}
+        <CovidTimeSeriesGraph covidTimeSeries={countryTimeSeries ? countryTimeSeries.data : []} covidTimeSeriesDelta={countryCovidDelta ? countryCovidDelta.data : []} title={`${codeToName[props.match.params.countryCode]} Charts`}/>
+        <CovidCurveAnalysis />
       </div>
     </div>
   )

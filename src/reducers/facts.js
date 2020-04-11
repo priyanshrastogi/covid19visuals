@@ -3,9 +3,9 @@ import { ADD_FACT } from '../actions';
 export default (state = {}, action) => {
   switch(action.type) {
     case ADD_FACT:
-      state[action.payload.key] = action.payload.value;
-      return state;
+      const payload = action.payload;
+      return {...state, ...payload}
     default:
-    return state;
+      return state;
   }
 }
