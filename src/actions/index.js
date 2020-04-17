@@ -35,7 +35,7 @@ export const getGlobalData = () => async dispatch => {
   const countrywiseFacts = findCountrywiseFacts(countrywiseCovidTimeSeries, countrywiseDailyDelta);
   dispatch({type: ADD_FACT, payload: countrywiseFacts});
   const flatcurvecountries = findFlatCurveCountries(countrywiseCovidTimeSeries);
-  dispatch({type: GET_FLAT_CURVE_COUNTRIES, payload: flatcurvecountries});
+  dispatch({type: ADD_FACT, payload: {curve: flatcurvecountries}});
   console.log(flatcurvecountries);
 }
 

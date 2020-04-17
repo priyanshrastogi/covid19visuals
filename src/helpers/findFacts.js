@@ -74,8 +74,9 @@ export const findFlatCurveCountries = (timeseriesData) => {
   const countries = [];
   for(let i=0; i<timeseriesData.length; i++) {
     const active = findRatesAndRatio(timeseriesData[i].data, 7, 'active').rate;
-    if(active<=0) {
-      countries.push({country: timeseriesData[i].country, active});
+    if(active<0) {
+      const latest = timeseriesData[i].data[timeseriesData[i].data.length-1];
+      countries.push({country: timeseriesData[i].country, slope: active, confirmed: latest.confirmed, active: latest.active});
     }
   }
   return countries;

@@ -5,13 +5,13 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 import Home from './pages/Home';
-import About from './pages/About';
 import IndiaCovid from './pages/IndiaCovid';
 import Page404 from './pages/Page404';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/NavBar';
 import CountryCovid from './pages/CountryCovid';
+import CovidCurve from './pages/CovidCurve';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <ScrollToTop>
             <Switch>
               <Route exact path='/' component={Home}/>
-              <Route exact path='/about' component={About}/>
+              <Route exact path='/curve' component={CovidCurve}/>
               <Route exact path='/india' component={IndiaCovid} />
               <Route exact path='/:countryCode' component={CountryCovid} />
               <Route component={Page404} />

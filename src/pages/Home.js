@@ -10,6 +10,7 @@ import CovidTimeSeriesGraph from '../components/CovidTimeSeriesGraph';
 import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph';
 import Notification from '../components/Notification';
 import CovidCurveAnalysis from '../components/CovidCurveAnalysis';
+import { Link } from 'react-router-dom';
 
 function Home(props) {
   
@@ -30,6 +31,9 @@ function Home(props) {
       <div className="container">
         <CovidTimeSeriesGraph covidTimeSeries={props.globalCovidTimeSeries} covidTimeSeriesDelta={props.globalCovidDailyDelta} title='Global Charts'/>
         <CovidCurveAnalysis />
+        <div className="has-text-centered" style={{marginBottom: 40}}>
+          <Link to="/curve">View Detailed Curve Analysis</Link>
+        </div>
       </div>
       <Hero type='info' title='Country-wise Information' subtitle='Daily Updates, Facts and Analysis' date={props.globalCovid.date}/>
       <div style={{marginTop: 40}} className="container is-fluid">
@@ -44,6 +48,9 @@ function Home(props) {
             :
             null}
           </div>
+        </div>
+        <div className="has-text-centered" style={{marginBottom: 40}}>
+          <Link to="/curve">View Countries Where The Curve is Flattening</Link>
         </div>
       </div>
       <div className="container">

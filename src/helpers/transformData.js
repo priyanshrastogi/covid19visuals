@@ -16,7 +16,7 @@ export const getLatestGlobalData = (data) => {
     active = active + latest.confirmed - latest.deaths - latest.recovered;
   }
   const ncountries = keys.length;
-  return {date, confirmed, deaths, recovered, ncountries};
+  return {date, confirmed, deaths, recovered, active, ncountries};
 }
 
 export const getLatestCountrywiseData = (data) => {

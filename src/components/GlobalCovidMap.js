@@ -10,10 +10,10 @@ function GlobalCovidMap(props) {
   const [colors, setColors] = useState('oranges')
 
   const domainMap = {
-    confirmed: 100000,
-    active: 100000,
+    confirmed: 50000,
+    active: 50000,
     deaths: 10000,
-    recovered: 50000
+    recovered: 30000
   }
 
   const colorsMap = {
