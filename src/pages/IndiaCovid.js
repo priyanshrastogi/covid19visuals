@@ -15,8 +15,8 @@ function IndiaCovid(props) {
     }
   }, []);
 
-  let datetime = props.indiaCovid.statewise ? props.indiaCovid.statewise[0].lastupdatedtime : '--';
-  if(datetime !== '--') {
+  let datetime = props.indiaCovid.statewise ? props.indiaCovid.statewise[0].lastupdatedtime : null;
+  if(datetime) {
     const date = datetime.split(' ')[0].split('/');
     datetime = `${date[1]}/${date[0]}/${date[2]}  ${datetime.split(' ')[1]}`
   }

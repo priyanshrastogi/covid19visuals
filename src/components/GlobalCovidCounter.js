@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Loader from './Loader';
 
 function GlobalCovidCounter(props) {
   return (
@@ -8,31 +9,31 @@ function GlobalCovidCounter(props) {
         <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
           <div style={styles.item} className="has-background-warning">
             <p className="heading">Total Infected</p>
-            <p className="title is-5">{props.globalCovid.confirmed ? props.globalCovid.confirmed.toLocaleString() : '--'}</p>
+            <p className="title is-5">{props.globalCovid.confirmed ? props.globalCovid.confirmed.toLocaleString() : <Loader/>}</p>
           </div>
         </div>
         <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
           <div style={styles.item} className="has-background-danger">
             <p className="heading">Total Deaths</p>
-            <p className="title is-5">{props.globalCovid.deaths ? props.globalCovid.deaths.toLocaleString() : '--'}</p>
+            <p className="title is-5">{props.globalCovid.deaths ? props.globalCovid.deaths.toLocaleString() : <Loader/>}</p>
           </div>
         </div>
         <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
           <div style={styles.item} className="has-background-success">
             <p className="heading">Total Recovered</p>
-            <p className="title is-5">{props.globalCovid.recovered ? props.globalCovid.recovered.toLocaleString() : '--'}</p>
+            <p className="title is-5">{props.globalCovid.recovered ? props.globalCovid.recovered.toLocaleString() : <Loader/>}</p>
           </div>
         </div>
         <div className="column is-half-mobile is-one-quarter-desktop has-text-centered">
           <div style={styles.item} className="has-background-info">
             <p className="heading">Total Active</p>
-            <p className="title is-5">{props.globalCovid.active ? props.globalCovid.active.toLocaleString() : '--'}</p>
+            <p className="title is-5">{props.globalCovid.active ? props.globalCovid.active.toLocaleString() : <Loader/>}</p>
           </div>
         </div>
       </div>
       <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 40}}>
         <span></span>
-        <p>{`Data from ${props.globalCovid.ncountries} Countries/Regions*`}</p>
+        <p>{props.globalCovid.ncountries ? `Data from ${props.globalCovid.ncountries} Countries/Regions*` : <Loader />}</p>
       </div>
     </div>
   )

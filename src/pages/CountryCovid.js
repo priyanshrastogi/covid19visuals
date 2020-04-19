@@ -32,7 +32,7 @@ function CountryCovid(props) {
 
   return (
     <div>
-      <Hero type='link' title={`${codeToName[props.match.params.countryCode]} Covid-19 Information`} subtitle='Daily Updates, Facts and Analysis' date={countryData ? countryData.date : '--'}/>
+      <Hero type='link' title={`${codeToName[props.match.params.countryCode]} Covid-19 Information`} subtitle='Daily Updates, Facts and Analysis' date={countryData ? countryData.date : null}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <CountryCovidCounter covidData={countryData}/>
       </div>
