@@ -6,7 +6,7 @@ import features from '../data/mapData';
 function GlobalCovidMap(props) {
   
   const [type, setType] = useState('confirmed');
-  const [domain, setDomain] = useState(100000);
+  const [domain, setDomain] = useState(50000);
   const [colors, setColors] = useState('oranges')
 
   const domainMap = {
