@@ -145,7 +145,7 @@ export const getIndiaData = (data) => {
   const result = {};
   const indiaTimeSeries = [];
   const indiaTimeSeriesDelta = [];
-  const monthRef = {January: 1, February: 2, March: 3, April: 4, May: 5, June: 6};
+  const monthRef = {January: 1, February: 2, March: 3, April: 4, May: 5, June: 6, July: 7};
   const timeseries = data.cases_time_series;
   for(let i=0; i<timeseries.length; i++) {
     const confirmed = parseInt(timeseries[i].totalconfirmed);

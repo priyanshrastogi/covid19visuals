@@ -23,7 +23,7 @@ function IndiaCovid(props) {
 
   return (
     <div>
-      <Hero type='link' title='India Covid-19 Information' subtitle='Latest Updates, Facts and Analysis' date={datetime} dontadd30/>
+      <Hero type='link' title='India Covid-19 Information' subtitle='Latest Updates, Facts and Analysis' date={datetime} timezone='ist'/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <IndiaCovidCounter/>
       </div>
@@ -31,7 +31,7 @@ function IndiaCovid(props) {
         <CovidTimeSeriesGraph covidTimeSeries={props.indiaCovid.timeseries} covidTimeSeriesDelta={props.indiaCovid.timeseriesDelta} title='India Charts'/>
         <CovidCurveAnalysis />
       </div>
-      <Hero type='success' title='State-wise Information' subtitle='District-level information is coming soon' date={datetime} dontadd30/>
+      <Hero type='success' title='State-wise Information' subtitle='District-level information is coming soon' date={datetime} timezone='ist'/>
       <div style={{marginTop: 40}} className="container is-fluid">
         <div className="columns">
           <div className="column is-three-fifths is-offset-one-fifth">

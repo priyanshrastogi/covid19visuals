@@ -35,8 +35,6 @@ function CovidCurveAnalysis(props) {
     isFlatStr = 'Globally,'
   }
 
-  console.log(facts)
-
   return (
     <div style={{marginBottom: 40}}>
       <div style={{margin: 20, padding: 20}} className="card notification is-dark is-light">

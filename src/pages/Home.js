@@ -11,6 +11,7 @@ import CountrywiseTimeSeriesGraph from '../components/CountrywiseTimeSeriesGraph
 import Notification from '../components/Notification';
 import CovidCurveAnalysis from '../components/CovidCurveAnalysis';
 import { Link } from 'react-router-dom';
+import SelectCountryNotification from '../components/SelectCountryNotification';
 
 function Home(props) {
   
@@ -22,7 +23,7 @@ function Home(props) {
 
   return (
     <div>
-      <Notification content={<span><strong>India Covid-19 Information</strong> is available now in detail.</span>} type='primary' linkTitle='Visit Here' link='/india'/>
+      <SelectCountryNotification />
       <Hero type='link' title='Global Information' subtitle='Daily Updates, Facts and Analysis' date={props.globalCovid.date}/>
       <div className="container is-fluid" style={{marginTop: 20}}>
         <GlobalCovidCounter/>

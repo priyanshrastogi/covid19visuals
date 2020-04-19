@@ -14,7 +14,6 @@ export const ADD_FACT = 'add_Fact';
 export const GET_FLAT_CURVE_COUNTRIES = 'get_flat_curve_countries';
 
 export const getGlobalData = () => async dispatch => {
-  console.log("Getting data from API");
   const mainData = await axios.get('https://pomber.github.io/covid19/timeseries.json');
   const globalData = getLatestGlobalData(mainData.data);
   dispatch({type: GET_GLOBAL_COVID_DATA, payload: globalData});
@@ -36,7 +35,6 @@ export const getGlobalData = () => async dispatch => {
   dispatch({type: ADD_FACT, payload: countrywiseFacts});
   const flatcurvecountries = findFlatCurveCountries(countrywiseCovidTimeSeries);
   dispatch({type: ADD_FACT, payload: {curve: flatcurvecountries}});
-  console.log(flatcurvecountries);
 }
 
 export const getIndiaCovidData = () => async dispatch => {

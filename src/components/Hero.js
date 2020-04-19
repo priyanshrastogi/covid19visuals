@@ -1,9 +1,16 @@
 import React from 'react';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 export default function Hero(props) {
-  const date =  new Date(props.date);
-  props.dontadd30 ? console.log(date) : date.setHours(date.getHours() + 30);
+  let date = null;
+  if(props.timezone === 'utc' && props.date) {
+    const splits = props.date.split('-');
+    date = new Date(Date.UTC(parseInt(splits[0]), parseInt(splits[1])-1, parseInt(splits[2])+1, 0, 15, 0));
+  }
+  else if(props.timezone === 'ist') {
+    date = moment.utc(props.date).subtract(330, 'minutes');
+  }
   return (
     <section className={`hero is-${props.type}`}>
       <div className="hero-body">
@@ -24,4 +31,14 @@ export default function Hero(props) {
       </div>
     </section>
   )
+}
+
+Hero.propTypes = {
+  date: PropTypes.string,
+  type: PropTypes.string,
+  customDate: PropTypes.bool
+}
+
+Hero.defaultProps = {
+  timezone: 'utc'
 }

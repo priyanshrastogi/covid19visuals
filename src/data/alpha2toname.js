@@ -1,6 +1,6 @@
 import countryInfo from './countries';
 
-const countries = Object.keys(countryInfo);
+const countries = Object.keys(countryInfo).sort();
 
 const codeToName = {};
 
